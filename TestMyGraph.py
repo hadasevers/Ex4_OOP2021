@@ -2,7 +2,7 @@ from unittest import TestCase
 from my_graph import my_graph
 
 
-class TestDiGraph(TestCase):
+class TestMyGraph(TestCase):
 
     # sizes are tested with add/remove, same with mc
     def setUp(self) -> None:
