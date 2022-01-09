@@ -4,9 +4,6 @@
 
 In this project, we programmed a pokemon game which was based on directed weighted graph. The game, was programmed by Python.
 
-## Classes and methods 
-
-The part of the project was based on the previous task. So we used 3 previous classes.
 
 ## my_graph
 
@@ -74,6 +71,6 @@ executes the commands for the game.
 
  
 ## running the program 
- You can run our algorithm with the release
+ You can run our project with the release
  
  
