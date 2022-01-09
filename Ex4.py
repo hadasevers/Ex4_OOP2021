@@ -300,6 +300,7 @@ while client.is_running() == 'true':
     # check events
     for event in pygame.event.get():
         if event.type == QUIT:
+            client.stop_connection()
             quit()
             exit(0)
 
