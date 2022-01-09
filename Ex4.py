@@ -7,7 +7,7 @@ import pygame.time
 from GraphAlgo import GraphAlgo
 from my_graph import my_graph
 from my_node import my_node
-from Munche_A_2022.Ex4.src.client import Client
+from client import Client
 from pygame import font, color, Color, draw, rect, Rect, display, MOUSEBUTTONDOWN, QUIT, RESIZABLE
 from button_menu import *
 
@@ -388,11 +388,16 @@ while client.is_running() == 'true':
     # draw pokemons
     for p in g.graph.pokemons:
         # find pokemons location
+        r = 10
         x = my_scale(p.pos.get('x'), x=True)
         y = my_scale(p.pos.get('y'), y=True)
-
+        if p.type == -1:
+            pos = [[x, y + r], [x - r, y - r], [x + r, y - r]]
+            pygame.draw.polygon(screen, Color(53, 232, 211), pos)
+        elif p.type == 1:
+            pos = [[x, y - r], [x - r, y + r], [x + r, y + r]]
+            pygame.draw.polygon(screen, Color(232, 165, 32), pos)
         # draw the pokemon
-        pygame.draw.circle(screen, Color(255, 255, 128), (int(x), int(y)), radius=radius)
         #gfxdraw.aacircle(screen, int(x), int(y), radius, Color(85, 0, 85))
 
 
